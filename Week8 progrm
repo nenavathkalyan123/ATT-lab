@@ -1,41 +1,22 @@
-package Week8;
-
-
+package kalyan;
 
 import java.awt.AWTException;
-
+import java.awt.RenderingHints.Key;
 import java.awt.Robot;
-
 import java.awt.event.KeyEvent;
 
-
-
 import org.openqa.selenium.By;
-
-import org.openqa.selenium.By.ByXPath;
-
 import org.openqa.selenium.Keys;
-
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.openqa.selenium.interactions.Actions;
 
-
-
-public class Week7 {
-
-
+public class kalyan {
 
 	public static void main(String[] args) throws InterruptedException, AWTException {
-
-		
-
 		// TODO Auto-generated method stub
-
+		System.setProperty("webdrive.chrome.driver", "C:\\Users\\CFA\\Desktop\\22R01A67A5\\chromedriver-win64\\chromedriver.exe");
 		 WebDriver driver=new ChromeDriver();
 
 	        driver.get("https://www.google.com");
@@ -53,7 +34,7 @@ public class Week7 {
 	        WebElement img = driver.findElement(By.xpath("//a[normalize-space()='Images']"));
 
 	        img.click();
-
+	        
 	        WebElement img1=driver.findElement(By.xpath("//img[@alt='CMR Institute of Technology | Top Engineering College in Hyderabad']"));
 
 	        Actions a = new Actions(driver);
@@ -88,7 +69,7 @@ public class Week7 {
 
 	        r.keyPress(KeyEvent.VK_DOWN);
 
-	        Thread.sleep(1000);0
+	        Thread.sleep(1000);
 
 	        r.keyPress(KeyEvent.VK_ENTER);
 
@@ -97,5 +78,8 @@ public class Week7 {
 	        r.keyPress(KeyEvent.VK_ENTER);
 
 	        System.out.println("downloaded");
+
+	       
 	}
+
 }
